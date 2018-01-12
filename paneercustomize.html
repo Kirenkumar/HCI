@@ -1,0 +1,278 @@
+<html>
+<head>
+<title>7G Pizzas</title>
+<link rel="icon" href="http://payforpizza.com/wp-content/uploads/2013/12/pizza.png">
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/combine.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/jquery-ui.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/jquery.datetimepicker.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/layout.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/media.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/layout-menu.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/quick-view.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="pizza-customization.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/layout-menu-media.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/stylish-select.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="https://l2.pizzainindia.com/themes/OLO_v2.1/css16/deal.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+var oliveflag = 0;var onionflag = 0;var capsiflag = 0;var paneerflag = 0;var mushroomflag = 0;var cornflag = 0;var tomatoflag = 0;var jalapenoflag = 0;var redflag = 0;
+    $(".black-olive").click(function() {
+    $("#toppingsBlackOlive").toggle();
+	if(oliveflag==0)
+		{changeamt(30);oliveflag = 1;}
+	else
+		{changeamt(-30);oliveflag=0;}
+    });
+	 $(".onion").click(function() {
+    $("#toppingsOnion").toggle();
+		if(onionflag==0)
+		{changeamt(45);onionflag = 1;}
+	else
+		{changeamt(-45);onionflag=0;}
+    });
+	 $(".crisp-capsicum").click(function() {
+    $("#toppingsCrispCapsicum").toggle();
+		if(capsiflag==0)
+		{changeamt(30);capsiflag = 1;}
+	else
+		{changeamt(-30);capsiflag=0;}
+    });
+	 $(".paneer").click(function() {
+    $("#toppingsPaneer").toggle();
+		if(paneerflag==0)
+		{changeamt(60);paneerflag = 1;}
+	else
+		{changeamt(-60);paneerflag=0;}
+    });
+	 $(".grilled-mushroom").click(function() {
+    $("#toppingsGrilledMushroom").toggle();
+		if(mushroomflag==0)
+		{changeamt(60);mushroomflag = 1;}
+	else
+		{changeamt(-60);mushroomflag=0;}
+    }); 
+	$(".golden--corn").click(function() {
+    $("#toppingsGoldenCorn").toggle();
+		if(cornflag==0)
+		{changeamt(30);cornflag = 1;}
+	else
+		{changeamt(-30);cornflag=0;}
+    }); 
+	$(".fresh-tomato").click(function() {
+    $("#toppingsFreshTomato").toggle();
+		if(tomatoflag==0)
+		{changeamt(30);tomatoflag = 1;}
+	else
+		{changeamt(-30);tomatoflag=0;}
+    }); 
+	$(".jalapeno").click(function() {
+    $("#toppingsJalapeno").toggle();
+		if(jalapenoflag==0)
+		{changeamt(50);jalapenoflag = 1;}
+	else
+		{changeamt(-50);jalapenoflag = 0;}
+    });
+	 $(".red-paprika").click(function() {
+    $("#toppingsRedPaprika").toggle();
+		if(redflag==0)
+		{changeamt(40);redflag = 1;}
+	else
+		{changeamt(-40);redflag=0;}
+    });
+	
+	$(".minusBtn").click(function(){
+	var bla = $('input').val();
+	if(bla>1){
+		$("input").val(bla-1);
+	var amt = $('#customPriceId').text();
+	amt = parseInt(amt, 10);
+	amt-=295;
+	$('#customPriceId').text(amt+".00");	
+	}
+	});
+	
+	$(".plusBtn").click(function(){
+		var bla = $('input').val();
+		bla=parseInt(bla, 10) + 1;
+		$("input").val(bla);
+	var amt = $('#customPriceId').text();
+	amt = parseInt(amt, 10);
+	amt+=295;
+	$('#customPriceId').text(amt+".00");
+	});
+	});
+	function changeamt(rate){
+	var amt = $('#customPriceId').text();
+	amt = parseInt(amt, 10);
+	amt+=rate;
+	$('#customPriceId').text(amt+".00");
+	}
+    
+
+</script>
+<style>
+#toppingsBlackOlive{
+display : none;
+}
+#toppingsOnion{
+display:none;
+}
+#toppingsGrilledMushroom{
+display:none;
+}
+#toppingsCrispCapsicum{
+display:none;
+}
+#toppingsFreshTomato{
+display : none;
+}
+#toppingsJalapeno{
+display:none;
+}
+#toppingsRedPaprika{
+display:none;
+}
+#toppingsGoldenCorn{
+display:none;
+}
+#toppingsPaneer{
+display:none;
+}
+</style>
+</head>
+<body>
+<div class="customisationContainer" id="customize_sc" style="border-top: 0px;">
+    <div class="backToMenu">
+        <a href="vegpizzas.php">Back to menu</a>
+    </div>
+    <div class="customisationContainerLeft">
+        <div class="pizzaBox">
+            <h4>Peppy Paneer</h4>
+            <div class="customisePizzaLeftMobile">
+                <div class="pizzaImg">
+                        <img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products/originals/peppy_paneer.jpg" alt="peppy_paneer.jpg">
+						 <!--<div id="upperImages">-->
+                            <img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-greenOlives.png" alt="customise-pizza-greenOlives" class="toppingAdd " id="toppingsBlackOlive" >
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-onion.png" alt="customise-pizza-onion" class="toppingAdd " id="toppingsOnion">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-capsicum.png" alt="customise-pizza-capsicum" class="toppingAdd " id="toppingsCrispCapsicum">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-paneer.png" alt="customise-pizza-paneer" class="toppingAdd " id="toppingsPaneer">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-mushroom.png" alt="customise-pizza-mushroom" class="toppingAdd " id="toppingsGrilledMushroom">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-goldenCorn.png" alt="customise-pizza-goldenCorn" class="toppingAdd " id="toppingsGoldenCorn">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-tomato.png" alt="customise-pizza-tomato" class="toppingAdd " id="toppingsFreshTomato">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-jalapeno.png" alt="customise-pizza-jalapeno" class="toppingAdd " id="toppingsJalapeno">
+							<img src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/customise-pizza-paparika.png" alt="customise-pizza-paparika" class="toppingAdd " id="toppingsRedPaprika">
+						<!--</div>-->
+                </div>
+            </div>
+            <div class="customisePizzaRightMobile">
+                <div class="optionContainer">
+                    <div class="qty"><a href="#" class="minusBtnCustom minusBtn">-</a>
+                        <input id="product_qty" type="text" name="text" value="1" readonly="true"><a href="#" class="plusBtnCustom plusBtn">+</a>
+                    </div>
+                    <div class="customPrice">
+                        <input id="hidden-unit-price" type="hidden" value="195.00"><span id="customPriceId">295.00</span>
+                    </div>
+                    <div class="customButtonBox">
+                        <div class="btnBox"> <a href="#" class="ctnBlue" id="add-to-cart"> ADD TO CART </a>
+                        </div>
+                        <div class="btnBox"> <a href="#" class="cntRed" id="add-to-cart-buy-now"> BUY NOW </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info extraCondition"> * Extra Topping Will be chargeable </div>
+            </div>
+        </div>
+    </div>
+    <div class="customisationContainerRight">
+        <div class="customisingContent toppingsOuter" id="toppingPanel">
+            <div class="customisingContentLeft">
+                <div class="panel accord selectToppingsBox">
+
+                    <div class="panelBody">
+                        <div class="selectToppingsContainer">
+                            <ul class="selectToppingsTab">
+                                <li class="one"><a href="#vegToppings" class="active">Toppings</a>
+                                </li>
+                               </ul>
+                            <div class="selectToppingsContent active" id="vegToppings">
+                                <ul class="selectToppingsList">
+                                    <li>
+                                        <a href="#toppingsBlackOlive" class="black-olive "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsOlives.jpg"><span>Black Olive</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175419">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsOnion" class="onion "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsOnion.jpg"><span>Onion</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175422">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsCrispCapsicum" class="crisp-capsicum "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsCapsicum.jpg"><span>Crisp Capsicum</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175425">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsPaneer" class="paneer "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsPaneer.jpg"><span>Paneer</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175428">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsGrilledMushroom" class="grilled-mushroom "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsMushroom.jpg"><span>Grilled Mushroom</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175431">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsGoldenCorn" class="golden--corn "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsGoldenCorn.jpg"><span>Golden  Corn</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175434">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsFreshTomato" class="fresh-tomato "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsTomato.jpg"><span>Fresh Tomato</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175440">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsJalapeno" class="jalapeno "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsJalapeno.jpg"><span>Jalapeno</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175443">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                    <li>
+                                        <a href="#toppingsRedPaprika" class="red-paprika "><img alt="" src="https://l1.pizzainindia.com/assets/osc/ABAAA/images/products_attributes/toppingsPaparika.jpg"><span>Red Paprika</span>
+                                        </a>
+                                        <input name="hidden_attributes" type="hidden" value="175446">
+                                        <input name="hidden_price" type="hidden" value="50.00">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="selectToppingsContent" id="extraCheeze"><span class="checkbox" style="background-position: 0px 0px;" id="extraCheezeCheck"></span>
+                                <input type="checkbox" class="styled" name="extraCheese" value="" id="extraCheese">
+                                <label for="extraCheese" class="labelText">Add Extra Cheese</label>
+                                <input type="hidden" name="hidden_price" value="65.00">
+                                <input type="hidden" name="hidden_attributes" value="175416">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="customisingContentRight">
+                <div class="gutterContainer toppingGutter customTopping" style="display: none;"><img src="https://l1.pizzainindia.com/themes/OLO_v2.1/images/gutterIcon2.png" alt="" class="gutterIcon">
+                    <h4>People who bought this Pizza also added the following toppings</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
